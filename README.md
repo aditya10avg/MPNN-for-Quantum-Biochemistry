@@ -67,6 +67,18 @@ We measure performance against:
 2. **Chemical accuracy** – Quantum chemical accuracy of predicted properties.
 
 ---
+## Virtual Graph Elements
+
+There are two approaches to sending a message --
+1. Virtual Edge 
+2. Master Node
+i. **Virtual Edge** – This allows information to travel long distances during the propagation phase.
+ii. **Master Node** – A master is connected to every node in the network and acts like a shared workspace that all nodes can read from and write during communication.
+
+## Readout functions ;-
+Two ways of reading are 
+1. Gated Graph Neural Network- Gather and sum up/add the information that each node has learned.
+2. set2set - It creates a summary of information that doesn't depend on the order of nodes. It takes the final state of each node, and applies transformation (linear projection) to combine each node's state with its features. It  creates a summary of the whole graph.
 
 ## Next Steps
 
