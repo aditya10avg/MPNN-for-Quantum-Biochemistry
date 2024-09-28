@@ -84,15 +84,15 @@ Two ways of reading are
 
 ### Multiple Towers
 
-*One challenge is that processing large graphs with many nodes & features can become very slow and use a lot of compute power .When graphs has many nodes & each node has many features the number of operations needed ncreases a lot.
+- **One challenge is that processing large graphs with many nodes & features can become very slow and use a lot of compute power .When graphs has many nodes & each node has many features the number of operations needed ncreases a lot.
 
-*To fix this , we split features of each node in smaller groups. E.g If a node has 100 features split them into 5 groups of 20 features each. 
+- **To fix this , we split features of each node in smaller groups. E.g If a node has 100 features split them into 5 groups of 20 features each. 
 
-*We then process each group separately by using its own message passing step. 
+- **We then process each group separately by using its own message passing step. 
 
-*The seperate results from each group are combined to form final node representation. 
+- **The seperate results from each group are combined to form final node representation. 
 
-*This reduces computation cost and time taken for the model to learn while still capturing the necessary information from graphs.
+- **This reduces computation cost and time taken for the model to learn while still capturing the necessary information from graphs.
 
 
 ### Input Representation
