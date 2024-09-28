@@ -99,6 +99,19 @@ Two ways of reading are
 
 This deals with different possible ways in which atoms and their bonds are represented in a molecule while building a model and also observe the how fast the model learns using each representation and also to understand the structure of molecule.
 
+1. Atom Features - Each atom in a molecule has certain features like it's electrons , no. of H atoms , bonds with other atoms etc
+   One possible way would be to include Hydrogen atoms as separate nodes in the graph but this would slow down the model. (about 10 times slower)
+
+2. Adjacent Matrices
+   This matrix shows how atoms are connected (bonds between atoms).
+   We can use 3 types of ways to represent edges(bonds) between atoms depending on the model.
+
+3. Chemical bins - When using distance between atoms, group distances into 10 bins.
+     These bins cover distance from 0 to infinity and are based on how far apart atoms are in the molecule. Bond types were also included so the matrix shows both bond type and distance.
+
+4. Raw Distance Feature-
+    When using a more complex function to pass information information, include the exact distance between atoms and encode the bond type ( using 1 for present and 0 for not present) 
+
 
 
 ## Next Steps
