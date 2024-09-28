@@ -66,7 +66,7 @@ We measure performance against:
 1. **DFT error** – Error compared to DFT predictions.
 2. **Chemical accuracy** – Quantum chemical accuracy of predicted properties.
 
----
+
 ## Virtual Graph Elements
 
 There are two approaches to sending a message --
@@ -79,6 +79,21 @@ ii. **Master Node** – A master is connected to every node in the network and a
 Two ways of reading are 
 1. Gated Graph Neural Network- Gather and sum up/add the information that each node has learned.
 2. set2set - It creates a summary of information that doesn't depend on the order of nodes. It takes the final state of each node, and applies transformation (linear projection) to combine each node's state with its features. It  creates a summary of the whole graph.
+
+   ---
+
+### Multiple Towere 
+
+One challenge is that processing large graphs with many nodes & features can become very slow and use a lot of compute power .When graphs has many nodes & each node has many features the number of operations needed ncreases a lot.
+
+To fix this , we split features of each node in smaller groups. E.g If a node has 100 features split them into 5 groups of 20 features each. 
+
+We then process each group separately by using its own message passing step. 
+
+The seperate results from each group are combined to form final node representation. 
+
+This reduces computation cost and time taken for the model to learn while still capturing the necessary information from graphs.
+
 
 ## Next Steps
 
