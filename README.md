@@ -97,6 +97,9 @@ Two ways of reading are
 
 ### Input Representation
 
+This deals with different possible ways in which atoms and their bonds are represented in a molecule while building a model and also observe the how fast the model learns using each representation and also to understand the structure of molecule.
+
+
 
 ## Next Steps
 
